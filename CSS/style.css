@@ -1,0 +1,100 @@
+body{
+    font-family: "PT Sans Caption", sans-serif;
+    color: #212529;
+    background-color: #F7ECDE;
+}
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "Pacifico", cursive;
+    color: #352E28;
+}
+h1::after{
+    content: "";
+    background-color: #FEC260;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 33%;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+h1:hover::after{
+    height: 70%;
+}
+.border-b{
+    border-bottom: 2px dotted #212529 ;
+}
+
+h2{
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    background: linear-gradient(to right , #3EA55B,#B2AC4A);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content button{
+    --bs-btn-bg: #0000FF;
+    --bs-btn-hover-bg: #008000;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 90px;
+}
+
+.form-input:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.btn-submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+}
+
+.visit-btn{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+form p{
+    font-size: 12px;
+    color: red;
+}
+.circles span{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(1){
+    background-color: #F15F5D;
+}
+.circles span:nth-child(2){
+    background-color: #FEBE2E;
+}
+.circles span:nth-child(3){
+    background-color: #4DB748;
+}
+.alert-box-content{
+    max-width: 500px;
+    height: fit-content;
+    background-color: white;
+}
+.alert-box-content p span i{
+    color: #F15F5D;
+}
+.alert-box{
+    background-color: #212529aa;
+}

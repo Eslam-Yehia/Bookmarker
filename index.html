@@ -1,0 +1,138 @@
+<!-- @format -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookmark.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <div
+      class="w-100 h-100 alert-box d-none justify-content-center align-items-center position-fixed z-3"
+    >
+      <div
+        class="px-4 py-4 alert-box-content shadow rounded-3 d-flex justify-content-center flex-column"
+      >
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+
+          <button class="btn p-0 border-0" id="closeAlertBtn">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </div>
+        <p class="h5 fw-bold py-4">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <p class="fs-6 text-start">
+          <i class="fa-regular fa-circle-right p-2 fs-6"></i>
+          Site name must contain at least 3 characters
+        </p>
+        <p class="fs-6 text-start">
+          <i class="fa-regular fa-circle-right p-2 fs-6"></i>
+          Site URL must be a valid one
+        </p>
+      </div>
+    </div>
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="border-b justify-content-center align-items-center text-center d-flex pb-5"
+            >
+              <h1 class="position-relative">Bookmarker</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="justify-content-center align-items-center text-center d-flex py-3"
+            >
+              <h2 class="">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="inner pt-3 pt-5 pb-3 border-b">
+            <form>
+              <label for="siteName" class="pb-2 ps-1 fw-bold"
+                ><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label
+              >
+              <input
+                type="text"
+                id="siteName"
+                placeholder="Bookmark Name"
+                class="form-control form-input"
+                autocomplete="off"
+              />
+              <p class="mb-0 d-none">
+                *Must Contain at least
+                <span class="fw-bolder fs-6">3 characters</span> a-z _
+              </p>
+              <label for="siteUrl" class="pb-2 ps-1 mt-4 fw-bold"
+                ><i class="fa-solid fa-link pe-2"></i>Site URL</label
+              >
+              <input
+                type="text"
+                id="siteUrl"
+                placeholder="Website URL"
+                class="form-control form-input"
+                autocomplete="off"
+              />
+              <p class="mb-0 d-none">
+                *Must Contain at least (www . 3 characters . 3 characters)
+                <span class="fw-bolder fs-6"> ex: www.xxx.xxx</span>
+              </p>
+              <button
+                type="button"
+                id="submitBtn"
+                class="btn btn-submit px-5 mt-4 text-center d-block mx-auto"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="row table-content mt-4">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody" class="fw-normal"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
